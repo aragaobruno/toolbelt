@@ -30,7 +30,7 @@ def parse_python_file(file_path):
             self.indent += 1
             self.generic_visit(node)
             self.indent -= 1
-            lines.append("") # Empty line after class definitions
+            lines.append("")
             
         def visit_FunctionDef(self, node):
             indent_str = "    " * self.indent
@@ -121,14 +121,12 @@ def compact_directory(directory, exclude_patterns):
     summary_parts = []
     
     for root, dirs, files in os.walk(directory):
-        # Exclude directories in-place to prevent os.walk from entering them
         dirs[:] = [d for d in dirs if d not in ['.git', 'node_modules', '__pycache__', 'dist', 'build']]
         
         for file in files:
             file_path = os.path.join(root, file)
             rel_path = os.path.relpath(file_path, directory)
             
-            # Check exclusions
             should_exclude = False
             for pat in exclude_patterns:
                 if pat and (pat in rel_path or pat in file):
@@ -150,29 +148,29 @@ def compact_directory(directory, exclude_patterns):
     return "\n".join(summary_parts)
 
 def main():
-    parser = argparse.ArgumentParser(description="Compacta diretórios de código para otimização de tokens.")
-    parser.add_argument("directory", help="Diretório raiz a ser compactado")
-    parser.add_argument("--output", required=True, help="Caminho do arquivo de saída de texto")
-    parser.add_argument("--exclude", default="", help="Padrões de exclusão separados por vírgula (ex: test,build)")
+    parser = argparse.ArgumentParser(description="Compacts codebase directories for token optimization.")
+    parser.add_argument("directory", help="Root directory to compact")
+    parser.add_argument("--output", required=True, help="Path to the output summary file")
+    parser.add_argument("--exclude", default="", help="Comma-separated exclude patterns (e.g. test,build)")
     
     args = parser.parse_args()
     
     if not os.path.isdir(args.directory):
-        print(f"Erro: O diretório não existe: {args.directory}", file=sys.stderr)
+        print(f"Error: Directory does not exist: {args.directory}", file=sys.stderr)
         sys.exit(1)
         
     exclude_patterns = [p.strip() for p in args.exclude.split(",")]
     
-    print(f"Varrendo diretório: {args.directory}...")
+    print(f"Scanning directory: {args.directory}...")
     compact_text = compact_directory(args.directory, exclude_patterns)
     
     try:
         with open(args.output, "w", encoding="utf-8") as f:
             f.write(compact_text)
-        print(f"\n[SUCESSO] Compactação concluída!")
-        print(f"Resumo salvo em: {args.output}")
+        print(f"\n[SUCCESS] Compaction completed!")
+        print(f"Summary saved at: {args.output}")
     except Exception as e:
-        print(f"Erro ao salvar arquivo de saída: {e}", file=sys.stderr)
+        print(f"Error writing output file: {e}", file=sys.stderr)
         sys.exit(1)
 
 if __name__ == "__main__":
