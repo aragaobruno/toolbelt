@@ -15,8 +15,8 @@ Here are the developed skills structured logically and sequentially:
 *   **[`context-compactor`](skills/context/context-compactor):** Source code compactor. Scans large file trees and generates lightweight structural maps containing only classes, methods, signatures, and docstrings for token context window optimization.
 
 ### 🛠️ Category: DevOps & Git Workflows (Phase 2)
-*   *Coming soon:* **`smart-pr-generator`** (Auto PR and commit message generator with built-in anti-slop rules).
-*   *Coming soon:* **`unit-test-bootstrapper`** (Unit test boilerplates generator from compacted code outlines).
+*   **[`smart-pr-generator`](skills/devops/smart-pr-generator):** Conventional Commit and SRE-grade Pull Request description generator from Git diffs. Includes built-in AI-slop filtering and options for interactive commit creation.
+*   **[`unit-test-bootstrapper`](skills/devops/unit-test-bootstrapper):** Automated unit test suite generator (pytest for Python, Jest for JS/TS). Analyzes source code files using Gemini to bootstrap comprehensive test suites covering happy paths, edge cases, and error handling.
 
 ### 🌐 Category: Data Integration & APIs (Phase 3)
 *   *Coming soon:* **`structured-news-harvester`** (Real-time tech discussion harvester and noise cleaner).
