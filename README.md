@@ -19,8 +19,8 @@ Here are the developed skills structured logically and sequentially:
 *   **[`unit-test-bootstrapper`](skills/devops/unit-test-bootstrapper):** Automated unit test suite generator (pytest for Python, Jest for JS/TS). Analyzes source code files using Gemini to bootstrap comprehensive test suites covering happy paths, edge cases, and error handling.
 
 ### 🌐 Category: Data Integration & APIs (Phase 3)
-*   *Coming soon:* **`structured-news-harvester`** (Real-time tech discussion harvester and noise cleaner).
-*   *Coming soon:* **`schema-markup-builder`** (JSON-LD structured schema builder for technical SEO).
+*   **[`structured-news-harvester`](skills/integration/structured-news-harvester):** Real-time technical news and discussion scraper (Hacker News). Uses Gemini to filter noise, clickbait, and marketing fluff, producing clean executive summaries in Markdown.
+*   **[`schema-markup-builder`](skills/integration/schema-markup-builder):** Automated generator for Google-compliant SEO structured data (JSON-LD). Streamlines creation of schema.org markups for local businesses, organization portfolios, and products.
 
 ---
 
