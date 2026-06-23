@@ -20,3 +20,7 @@ python_files = ["test_*.py"]
 python_classes = ["Test*"]
 python_functions = ["test_*"]
 addopts = "--tb=short"
+pythonpath = [
+    "skills/context/context-compactor/scripts",
+    "skills/automation/supabase-schema-generator/scripts"
+]
