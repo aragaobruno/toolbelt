@@ -22,6 +22,10 @@ Here are the developed skills structured logically and sequentially:
 *   **[`structured-news-harvester`](skills/integration/structured-news-harvester):** Real-time technical news and discussion scraper (Hacker News). Uses Gemini to filter noise, clickbait, and marketing fluff, producing clean executive summaries in Markdown.
 *   **[`schema-markup-builder`](skills/integration/schema-markup-builder):** Automated generator for Google-compliant SEO structured data (JSON-LD). Streamlines creation of schema.org markups for local businesses, organization portfolios, and products.
 
+### 🗄️ Category: Database & Workflow Automation (Phase 4)
+*   **[`supabase-schema-generator`](skills/automation/supabase-schema-generator):** SRE-grade database schema interpreter (Python). Automatically reverse-engineers SQL DDL files to output clean frontend TypeScript type interfaces and secure Supabase Row Level Security (RLS) policies.
+*   **[`n8n-workflow-packer`](skills/automation/n8n-workflow-packer):** DevSecOps sanitization utility for n8n workflows (Node.js). Strips and redacts API tokens, private credential IDs, and active webhook URLs from workflow JSON files to allow secure version control.
+
 ---
 
 ## 🚀 How It Works
