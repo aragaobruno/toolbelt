@@ -32,13 +32,13 @@ jobs:
         cache: 'npm'
 
     - name: Install Python dependencies
-      run: uv pip install google-genai pytest pytest-cov ruff --system
+      run: uv sync --frozen
 
     - name: Install Node.js dependencies
       run: npm ci
 
     - name: Run Python tests
-      run: pytest
+      run: uv run pytest
 
     - name: Run Node.js tests
       run: npm test
