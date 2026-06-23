@@ -1,0 +1,11 @@
+{
+  "name": "toolbelt",
+  "version": "0.1.0",
+  "description": "SRE-grade AI Agent Toolchain & Skill Harness",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}

@@ -111,4 +111,16 @@ function main() {
   }
 }
 
-main();
+if (require.main === module) {
+  main();
+}
+
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = {
+    sanitizeValue,
+    sanitizeObject,
+    parseArgs,
+    main
+  };
+}
+
