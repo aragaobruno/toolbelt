@@ -21,14 +21,14 @@ class TestSupabaseSchemaGenerator(unittest.TestCase):
         self.assertEqual(generator.get_api_key(), "mock-api-key")
 
     @patch("os.environ.get")
-    @patch("builtins.open", new_callable=mock_open, read_data="GOOGLE_API_KEY=mock-env-file-key\n")
+    @patch("generator.open", new_callable=mock_open, read_data="GOOGLE_API_KEY=mock-env-file-key\n")
     def test_get_api_key_from_file_fallback(self, mock_file_open, mock_env_get):
         mock_env_get.return_value = None
         self.assertEqual(generator.get_api_key(), "mock-env-file-key")
         mock_file_open.assert_called_once_with(r"C:\Users\araga\.hermes\.env", "r", encoding="utf-8")
 
     @patch("os.path.exists")
-    @patch("builtins.open", new_callable=mock_open, read_data="CREATE TABLE test (id INT);")
+    @patch("generator.open", new_callable=mock_open, read_data="CREATE TABLE test (id INT);")
     @patch("generator.get_api_key")
     @patch("generator.genai.Client")
     @patch("generator.analyze_schema")
