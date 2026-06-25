@@ -18,7 +18,19 @@ These rules define the project-level engineering guidelines, architectural prefe
 ---
 
 ## 🕷️ 3. Intelligent Web Scraping: ScrapeGraphAI
-*   **Primary Tool:** For any task involving web scraping, data extraction from HTML/XML/JSON/Markdown, or gathering unstructured online data, **always prioritize ScrapeGraphAI**.
 *   **Self-Healing Pipelines:** Leverage LLM-driven graph extraction (e.g. `SmartScraperGraph`, `SearchGraph`) instead of writing brittle manual selectors.
 *   **Local Execution SRE Rules:** Integrate ScrapeGraphAI locally, utilizing Ollama for local LLM inference when possible to optimize costs, while preserving credential security boundaries.
+
+---
+
+## 🔌 4. Model Context Protocol (MCP) Servers
+*   **Active Servers:** The following MCP servers are globally configured in `C:\Users\araga\.gemini\antigravity\mcp_config.json` and available for use in our workflows:
+    *   `perplexity`: Live web search and deep research (requires API key).
+    *   `playwright`: Dynamic browser automation, UI testing, and screenshots.
+    *   `firecrawl`: Clean markdown crawler for scraping large sites efficiently (requires API key).
+    *   `glyph`: Multimedia vision computer and visual verification tools.
+    *   `chrome-devtools`: Connects directly to Bruno's active Chrome browser via remote debugging (`--remote-debugging-port=9222`).
+    *   `github`: Repository manipulation, pull requests, and automation.
+    *   `postgres-toolbox` & `mysql-toolbox`: Structured database inspection and query tools.
+
 
