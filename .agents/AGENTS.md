@@ -46,6 +46,13 @@ These rules define the project-level engineering guidelines, architectural prefe
     *   `agno/`: Lightweight memory, tool, and vector DB connectors for LLMs.
     *   `PraisonAI/`: Declarative YAML-based multi-agent configurations.
     *   `open-webui/`: Private, self-hosted web UI for local/cloud LLMs.
+---
 
-
+## 🛠️ 6. SRE Architectural Guidelines
+When designing or building software systems (such as Aegis Nexus, ai-video-factory, or toolbelt), always adhere to these performance and security guidelines:
+*   **Security (Zero Hardcoding):** Never hardcode secrets or API tokens. Reference them via environment variables (e.g. `$VAR`) in MCP configs and load them from `.env` or system environment context in code.
+*   **API Cost Optimization (Pre-filtering):** Before feeding raw online data (like CertStream feeds or large web-crawls) to expensive multimodal LLM APIs, implement a fast, local pre-filter (e.g. Levenshtein distance, regex, or local small models).
+*   **Memory Efficiency (GPU VRAM Flush):** On local execution tasks utilizing GPUs (such as Stable Diffusion or Whisper pipelines on the 6GB RTX 4050), explicitly clear CUDA cache (`torch.cuda.empty_cache()` and `gc.collect()`) after each sequential step to prevent Out of Memory (OOM) errors.
+*   **Human-in-the-loop (Slack/Mem0):** Link system alerts to Slack interactive buttons. Action logs (approvals/rejections) from humans must update the local Mem0 memory to continuously align agent behavior.
+*   **Self-Healing Code Pipelines:** Integrate toolbelt automation to intercept system error logs, query documentation via Perplexity MCP, run local tests on db toolboxes, and autonomously open Git pull requests for code corrections.
 
