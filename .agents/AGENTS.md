@@ -31,6 +31,21 @@ These rules define the project-level engineering guidelines, architectural prefe
     *   `glyph`: Multimedia vision computer and visual verification tools.
     *   `chrome-devtools`: Connects directly to Bruno's active Chrome browser via remote debugging (`--remote-debugging-port=9222`).
     *   `github`: Repository manipulation, pull requests, and automation.
+    *   `git`: Local git repository reading, commit logs, and branch management.
+    *   `docker`: Local Docker container management (inspecting, starting, stopping services).
+    *   `slack`: Posting alerts and reading messages in channels (requires bot token).
     *   `postgres-toolbox` & `mysql-toolbox`: Structured database inspection and query tools.
+
+---
+
+## 📚 5. Local Orchestration & Reference Libraries
+*   **Architectural References:** The following codebases are cloned locally in `C:\Users\araga\.gemini\antigravity\scratch/` for direct architectural reference, implementation examples, and design patterns:
+    *   `crewai/`: Multi-agent orchestration and task delegation.
+    *   `scrapegraph-ai/`: AI-driven graph web scraping with Pydantic output.
+    *   `langgraph/`: Stateful, cyclical graph-based multi-agent workflows.
+    *   `agno/`: Lightweight memory, tool, and vector DB connectors for LLMs.
+    *   `PraisonAI/`: Declarative YAML-based multi-agent configurations.
+    *   `open-webui/`: Private, self-hosted web UI for local/cloud LLMs.
+
 
 
