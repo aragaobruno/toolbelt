@@ -23,6 +23,7 @@ Here are the developed skills structured logically and sequentially:
 *   **[`structured-news-harvester`](skills/integration/structured-news-harvester):** Real-time technical news and discussion scraper (Hacker News). Uses Gemini to filter noise, clickbait, and marketing fluff, producing clean executive summaries in Markdown.
 *   **[`schema-markup-builder`](skills/integration/schema-markup-builder):** Automated generator for Google-compliant SEO structured data (JSON-LD). Streamlines creation of schema.org markups for local businesses, organization portfolios, and products.
 *   **[`cyber-fraud-forensics`](skills/integration/cyber-fraud-forensics):** Digital brand protection and phishing forensics. Defines SOPs for network evidence capture and generates structured forensic Abuse Reports for hosting/registrar notification.
+*   **[`openpencil-design`](skills/integration/openpencil-design):** AI-native vector UI/UX design with OpenPencil. Guides agents to create, modify, and manage vector node JSON structures (`.op`) using the `op` CLI and MCP design commands.
 
 ### 🗄️ Category: Database & Workflow Automation (Phase 4)
 *   **[`supabase-schema-generator`](skills/automation/supabase-schema-generator):** SRE-grade database schema interpreter (Python). Automatically reverse-engineers SQL DDL files to output clean frontend TypeScript type interfaces and secure Supabase Row Level Security (RLS) policies.
